@@ -1,0 +1,24 @@
+// file name:flipcoin.ch        
+
+#include <iostream>
+double coinflips = 0,heads,tails,result,prob1,prob2;
+string_t freq="Frequency",coin="Coin Face",prob="Probability";
+
+
+do {coinflips = coinflips + 1;
+    result = randint (1,2);
+    
+    if (result == 1)
+        heads = heads + 1;
+    else
+        tails = tails + 1;
+    
+}while (coinflips != 100000);
+
+prob1 = heads*0.001;
+prob2 = tails*0.001;
+
+cout << freq << "%16s" << coin << "%16s" << prob << "\n";
+cout << "head" << "%17.0lf" << heads << "%17.2lf\n" << prob1;
+cout << "tails" << "%16.0lf" << tails << "%17.2lf\n" << prob2 << "\n";
+
